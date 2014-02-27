@@ -14,8 +14,9 @@ public class FibonacciResponse implements Parcelable {
 		this.timeInMillis = timeInMillis;
 	}
 
-	public FibonacciResponse(Parcel parcel) {
-		this(parcel.readLong(), parcel.readLong());
+	public FibonacciResponse(Parcel in) {
+		this.result = in.readLong();
+		this.timeInMillis = in.readLong();
 	}
 
 	public long getResult() {
